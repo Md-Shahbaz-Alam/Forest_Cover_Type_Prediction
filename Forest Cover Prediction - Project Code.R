@@ -230,7 +230,7 @@ table(pred.gbm.test)
 confusionMatrix(pred.gbm.test, test.data$Cover_Type)
 
 resamps <- resamples(list(GB = fit_gbm,
-                          RF = fit_rf4))
+                          RF = fit_rf3))
 resamps
 
 
@@ -247,5 +247,5 @@ difValues
 summary(difValues)
 
 
-## best result is given by RF4 i.e. the random forest with 2000 trees
-## HENCE WE CONCLUDE THAT RANDOM FOREST IS GIVING BEST RESULT WITH 2000 TREES
+## best result is given by gbm i.e. the gradient boosting machine forest with 1500 trees
+## HENCE WE CONCLUDE THAT GRADIENT BOOSTING MACHINE IS GIVING BEST RESULT WITH 1500 TREES
